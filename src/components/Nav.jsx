@@ -16,6 +16,13 @@ const Nav = () => {
     }
   }
 
+  document.body.addEventListener('click', (e) => {
+    if (e.target.id === 'nav-link') {
+      setactiveMenu(false)
+      document.body.style.overflow = 'visible'
+    }
+  })
+
   return (
     <header className='padding-x py-8 absolute z-20 w-full'>
       <nav className='flex justify-between items-center max-container'>
@@ -35,13 +42,14 @@ const Nav = () => {
           ))}
         </ul>
         <ul
-          className={`hidden max-lg:flex max-lg:flex-col bg-coral-red flex-1 justify-center items-center gap-10 absolute top-${
-            activeMenu ? '0' : '[-700px]'
+          className={`hidden max-lg:flex max-lg:flex-col bg-coral-red flex-1 justify-center items-center gap-10 absolute ${
+            activeMenu ? 'top-0' : 'top-[-1000px]'
           } right-0 h-screen left-0 p-10 z-10 transition-all delay-100 ease-in`}
         >
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
+                id='nav-link'
                 className='font-montserrat leading-normal text-lg text-slate-gray max-lg:text-white'
                 href={link.href}
               >
