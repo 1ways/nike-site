@@ -48,7 +48,7 @@ const Hero = () => {
           className='object-contain relative z-10 w-[610px] h-[500px] max-wider:w-[460px] max-wider:h-[350px] max-xl:w-[490px] max-xl:h-[380px]'
         />
 
-        <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] xl:left-[10%] max-sm:px-6 max-xl:left-[50%] max-xl:translate-x-[-50%]'>
+        <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] xl:left-[10%] max-sm:px-6 max-xl:left-[50%] max-xl:translate-x-[-50%] max-sm:px-0'>
           {shoes.map((shoe, index) => (
             <div key={index}>
               <ShoeCard

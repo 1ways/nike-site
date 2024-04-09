@@ -18,7 +18,7 @@ const Footer = () => {
             {socialMedia.map((icon, index) => (
               <div
                 key={index}
-                className='flex justify-center items-center w-12 h-12 bg-white rounded-full'
+                className='flex justify-center items-center w-12 h-12 bg-white rounded-full cursor-pointer'
               >
                 <img
                   key={icon.alt}
@@ -65,7 +65,7 @@ const Footer = () => {
             width={20}
             height={20}
           />
-          <p>Copyright. All rights reserved.</p>
+          <p className='max-sm:text-center'>Copyright. All rights reserved.</p>
         </div>
         <p className='font-montserrat cursor-pointer'>Terms & Conditions</p>
       </div>

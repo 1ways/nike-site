@@ -2,9 +2,9 @@ import { star } from '../assets/icons'
 
 const PopularProductsCard = ({ imgURL, name, price, rating }) => {
   return (
-    <div className='flex flex-col flex-1 w-full max-sm:w-full cursor-pointer max-sm:items-center'>
+    <div className='flex flex-col w-full max-sm:w-full cursor-pointer max-sm:items-center max-sm:max-w-[240px] max-sm:mx-auto'>
       <img
-        className='max-w-[280px] max-h-[280px] max-md:w-full max-md:h-full max-md:object-cover'
+        className='max-md:block max-md:w-full max-md:h-full max-md:object-cover max-md:max-w-none max-md:max-h-none rounded-[20px]'
         src={imgURL}
         alt={name}
       />
